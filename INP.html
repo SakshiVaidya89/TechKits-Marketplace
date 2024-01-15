@@ -1,0 +1,148 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Place Order</title>
+	<link rel="stylesheet"
+		type="text/css"
+		href="ecom1.css">
+</head>
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"></h1>
+
+    <div class="row2">
+        <div class="image">
+           
+        </div>
+        <form action="">
+            
+            <button type="button"><h3>Select a Payement Method</h3></button>
+<input type="radio" label="UPI">
+<input type="radio" label="Credit card">
+<input type="radio" label="Debit Card">
+
+            <input type="email" placeholder="email" class="box">
+            
+            <input type="password" 
+                   id="password" 
+                   name="password" required>
+            <input type="number" placeholder="phone number" class="box">
+            <textarea placeholder="message" class="box" cols="30" rows="10"></textarea>
+            <a href="#" class="btn">
+                <span class="text text-1">Place Order</span>
+
+                <span class="text text-2" aria-hidden="true"></span>
+
+            </a>
+            <a href="#">
+                <button class="track">Track Your Orders</button>
+            </a>
+        </form>
+    </div>
+
+</section>
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #00042e;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-right: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px  rgba(0, 255, 255, 0.902);
+            color: #fff;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .payment-options {
+            margin-top: 15px;
+        }
+        .payment-options label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            
+            background-color: rgba(0, 255, 255, 0.902);0 0 10px 
+
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-seriff;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Order Now</h2>
+        <form action="process_order.php" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="upi">UPI</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="debit-card">Debit Card</option>
+            </select>
+
+            <div class="payment-options">
+                <label for="upi">UPI ID:</label>
+                <input type="text" id="upi" name="upi">
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number">
+
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv">
+            </div>
+
+            <button type="submit">Make Payment</button>
+        </form>
+    </div>
+</body>
+</html>
